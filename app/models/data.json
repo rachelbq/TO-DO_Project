@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "task": "Define corporate image",
+        "author_name": "Harry Spoon",
+        "start_date": "2022-10-17T08:00",
+        "end_date": "",
+        "task_status": "in progress"
+    },
+    {
+        "id": 2,
+        "task": "Logo pre-design",
+        "author_name": "Mariah Knife",
+        "start_date": "2022-10-17T08:00",
+        "end_date": "2022-10-17T14:00",
+        "task_status": "pending"
+    },
+    {
+        "id": 3,
+        "task": "Design e-marketing plan",
+        "author_name": "Stelle Fork",
+        "start_date": "2022-10-17T08:00",
+        "end_date": "",
+        "task_status": "done"
+    }
+]

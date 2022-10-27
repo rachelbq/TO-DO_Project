@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+  <title>TO-DO Project for Developers Team by Rachel B.</title>
+</head>
+
+<body>
+  <p class="mt-5 text-green-500 text-5xl text-center">Developers Team</p>
+  <p class="mt-4 text-green-600 text-center">TO-DO Form</p>
+  <p class="uppercase w-38 rounded-lg bg-pink-500 text-white text-center font-bold py-2 px-2 m-4 text-xl">
+    Add task
+  </p>
+  <div class="bg-green-200 min-h-screen flex items-center">
+    <div class="bg-white py-20 px-10 md:w-2/3 lg:w-1/2 mx-auto rounded">
+      <div class="flex items-center mb-5">
+        <form action="../../app/models/data.php" method="POST">
+          <label for="task" class="w-20 inline-block text-right mr-4 text-gray-500 text-gray-500">Task</label>
+          <input task="task" id="task" type="text" placeholder="brief task description"
+            class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400" />
+      </div>
+      <div class="flex items-center mb-5">
+        <label for="author_name" class="w-20 inline-block text-right mr-4 text-gray-500 text-gray-500">Name</label>
+        <input author_name="author_name" id="author_name" type="text" placeholder="person who created the task"
+          class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400" />
+      </div>
+      <div class="flex items-center mb-5">
+        <label for="start_date" class="w-20 inline-block text-right mr-4 text-gray-500 text-gray-500">Started</label>
+        <input start_date="start_date" id="start_date" type="datetime" placeholder="task creation date"
+          class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400" />
+      </div>
+      <div class="flex items-center mb-5">
+        <label for="end_date" class="w-20 inline-block text-right mr-4 text-gray-500 text-gray-500">Ended</label>
+        <input end_date="end_date" id="end_date" type="datetime" placeholder="task finalization date"
+          class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400" />
+      </div>
+      <div class="flex items-center mb-5">
+        <label for="task_status" class="w-20 inline-block text-right mr-4 text-gray-500 text-gray-500">Status</label>
+        <input task_status="task_status" id="task_status" type="text" placeholder="pending / in progress / done"
+          class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400" />
+      </div>
+      <div class="text-right">
+        <input type="submit" value="Save" class="mt-5 py-2 px-6 bg-green-500 text-green-100 font-bold rounded" />
+      </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -21,6 +21,7 @@ include(ROOT_PATH . '/config/routes.php');
  * Standard framework autoloader
  * @param string $className
  */
+
 function autoloader($className) {
 	// controller autoloading
 	if (strlen($className) > 10 && substr($className, -10) == 'Controller') {

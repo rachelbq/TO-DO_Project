@@ -1,14 +1,16 @@
 <?php
 
-class TestController extends ApplicationController
-{
-	public function indexAction()
-	{
+class TestController extends ApplicationController {
+	
+	public function indexAction() {
 		$this->view->message = "hello from test::index";
 	}
 	
-	public function checkAction()
-	{
+	public function checkAction() {
 		echo "hello from test::check";
+	}
+
+	public function taskAction() {
+		$this->view->message = "hello from test::index";
 	}
 }
