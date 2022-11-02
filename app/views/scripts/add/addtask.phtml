@@ -1,0 +1,54 @@
+<div>
+  <p class="uppercase w-38 rounded-lg bg-pink-500 text-white text-center font-bold py-2 px-2 m-4 text-xl">
+    Add Task
+  </p>
+</div>
+<div class="bg-green-200 min-h-screen flex items-bottom py-10">
+  <div class="bg-white py-10 px-10 mx-auto rounded">
+    <div>
+      <div>
+        <form method="post">
+          <div class="flex items-center mb-5">
+            <label class="inline-block text-left mr-4 font-bold text-gray-700 text-lg">Task name</label>
+            <input type="text" id="task_name" name="task_name" placeholder="brief task description"
+              class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400">
+          </div>
+          <div class="flex items-center mb-5">
+            <label class="inline-block text-left mr-4 font-bold text-gray-700 text-lg">Author name</label>
+            <input type="text" id="author_name" name="author_name" placeholder="who creates the task"
+              class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400">
+          </div>
+          <div class="flex items-center mb-5">
+            <label class="inline-block text-left mr-4 font-bold text-gray-700 text-lg">Start date</label>
+            <input type="datetime" id="start_date" name="start_date" placeholder="task creation date"
+              class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400">
+          </div>
+          <div class="flex items-center mb-5">
+            <label class="inline-block text-left mr-4 font-bold text-gray-700 text-lg">End date</label>
+            <input type="datetime" id="end_date" name="end_date" placeholder="task finalization date"
+              class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400">
+          </div>
+          <div class="pt-2">
+            <label class="inline-block text-left mr-4 font-bold text-gray-700 text-lg">Task status</label>
+            <select name="task-status" id="task-status" class=" p-2">
+              <option value="pending">pending</option>
+              <option value="in progress">in progress</option>
+              <option value="done">done</option>
+            </select><br><br>
+          </div>
+          <div class="text-right pt-10">
+            <input type="submit" value="Submit"
+              class="w-72 bg-green-500 hover:bg-green-700 text-green-100 font-bold py-2 px-2 rounded text-lg">
+            <a href="../web/"><input type="button" value="Return"
+                class="w-72 bg-green-500 hover:bg-green-700 text-green-100 font-bold py-2 px-2 rounded text-lg"></a>
+          </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+</body>
+
+</html>

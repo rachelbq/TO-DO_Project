@@ -1,16 +1,21 @@
 <?php
 
-require_once ROOT_PATH . '/app/models/data.php';
+require_once ROOT_PATH . '/app/models/data_model.php'; 
 
-class EditController extends ApplicationController{
+class EditController extends ApplicationController {
 
-	public function editAction(){
-		$this->view->message = "hello from test::index";
+	public function editTaskAction() {
+		$idTask = $_GET['id'];
+		$dataModel = new dataModel();
+		$getTask = $dataModel->editTask($idTask);
+		$this->view->editingTask = $getTask;
+		
+			if (!empty($_POST)) {
+				$dataModel->updateTask($_GET["id"],$_POST["task_name"], $_POST["author_name"], $_POST["start_date"], $_POST["end_date"], $_POST["task_status"]);
+			}
 	}
 	
-	public function changesAction(){
-		$model_data = new Model_data();
-		$model_data->editTak($_POST['task'],$_POST['author_name'],$_POST['start_date'],$_POST['end_date'],$_POST['task_status'], $_POST['id']);
-		//header("Location: /web/index");
+	public function viewAction() {
+		echo "hello from test::index";
 	}
 }

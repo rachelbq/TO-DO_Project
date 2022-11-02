@@ -1,11 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-	<?php echo $this->content(); ?>
-</body>
-</html>
+<<!DOCTYPE html>
+  <html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <title>TO-DO Project for Developers Team by Rachel B.</title>
+  </head>
+
+  <!--header-->
+  <?php
+   include(ROOT_PATH . '/app/views/layouts/header.phtml');
+  ?>
+
+  <!--body-->
+  <body>
+    <?php
+      echo $this->content();
+    ?>
+  </body>
+
+  <!--footer-->
+  <?php
+    include(ROOT_PATH . '/app/views/layouts/footer.phtml');
+  ?>
+
+  </html>
