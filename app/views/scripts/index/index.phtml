@@ -1,43 +1,45 @@
 <?php
 $tasks = ($this->content);
 ?>
+<div>
 <p class="uppercase w-38 rounded-lg bg-pink-500 text-white text-center font-bold py-2 px-2 m-4 text-xl">
   Tasks list
 </p>
+</div>
 <div class="bg-green-200 min-h-screen flex items-bottom py-10">
-  <div class="bg-white py-10 px-10 mx-auto rounded">
+  <div class="bg-white py-10 mx-auto rounded">
 
     <div id="task-table">
       <table class="w-full">
         <thead>
           <tr class="text-gray-700 text-bold">
-            <th class="text-left p-4">Task name</th>
-            <th class="text-left p-4">Author name</th>
-            <th class="text-left p-4">Start date</th>
-            <th class="text-left p-4">End date</th>
-            <th class="text-left p-4">Task Status</th>
-            <th class="text-center p-4">Edit<span> | </span>Remove</th>
+            <th class="text-left text-xs md:text-lg p-1">Task name</th>
+            <th class="text-left text-xs md:text-lg p-1">Author name</th>
+            <th class="text-left text-xs md:text-lg p-1">Start date</th>
+            <th class="text-left text-xs md:text-lg p-1">End date</th>
+            <th class="text-left text-xs md:text-lg p-1">Task Status</th>
+            <th class="text-center text-xs md:text-lg p-1">Edit<span> | </span>Remove</th>
           </tr>
         </thead>
         <tbody">
           <?php foreach ($tasks as $task): ?>
-          <tr class="text-gray-500">
-            <td class="text-left p-4">
+          <tr class="text-gray-500 text-lg">
+            <td class="text-left text-xs md:text-lg p-2">
               <?php echo $task["task_name"] ?>
             </td>
-            <td class="text-left p-4">
+            <td class="text-left text-xs md:text-lg p-2">
               <?php echo $task["author_name"] ?>
             </td>
-            <td class="text-left p-4">
+            <td class="text-left text-xs md:text-lg p-2">
               <?php echo $task["start_date"] ?>
             </td>
-            <td class="text-left p-4">
+            <td class="text-left text-xs md:text-lg p-2">
               <?php echo $task["end_date"] ?>
             </td>
-            <td class="text-left p-4">
+            <td class="text-left text-xs md:text-lg p-2">
               <?php echo $task["task_status"] ?>
             </td>
-            <td class="text-center p-4">
+            <td class="text-center text-xs md:text-lg p-2">
               <a href="edit?id=<?php echo $task["id"] ?>"><i class="fas fa-edit"></i></a>
               <span> | </span>
               <a href="remove?id=<?php echo $task["id"] ?>"><i class="fa-solid fa-eraser"></i></a>
@@ -47,7 +49,7 @@ $tasks = ($this->content);
           </tbody>
       </table>
       <div class="text-right">
-        <button class="w-72 bg-green-500 hover:bg-green-700 text-green-100 font-bold py-2 px-2 mt-10 rounded text-lg"><a
+        <button class="w-72 bg-green-500 hover:bg-green-700 text-green-100 font-bold py-2 px-2 mt-10 mr-5 rounded text-xs md:text-lg"><a
             href="../web/add">+Add task</button>
       </div>
 
