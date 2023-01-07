@@ -10,26 +10,41 @@
         <form method="post">
           <div class="flex items-center mb-5">
             <label class="inline-block text-left mr-4 font-bold text-gray-700 text-lg">Task name</label>
-            <input type="text" id="task_name" name="task_name" placeholder="brief task description"
-              class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400">
+            <input type="text" id="task_name" name="task_name" placeholder="brief task description" required
+              class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400"
+              oninvalid="this.setCustomValidity('This field is required')"
+              oninput="setCustomValidity('')">
           </div>
           <div class="flex items-center mb-5">
             <label class="inline-block text-left mr-4 font-bold text-gray-700 text-lg">Author name</label>
-            <input type="text" id="author_name" name="author_name" placeholder="who creates the task"
-              class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400">
+            <input type="text" id="author_name" name="author_name" placeholder="who creates the task" required
+              class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400"
+              oninvalid="this.setCustomValidity('This field is required')"
+              oninput="setCustomValidity('')">
           </div><br>
-          <div class="flex items-center mb-5">
-            <label for="start_date" class="inline-block text-left mr-4 font-bold text-gray-700 text-lg">Start
-              date:</label>
-            <input type="date" id="start_date" name="start_date" value="dd-mm-yyyy" min="2022-11-01" max="2023-12-31">
           </div>
           <div class="flex items-center mb-5">
-            <label for="end_date" class="inline-block text-left mr-4 font-bold text-gray-700 text-lg">End date:</label>
-            <input type="date" id="end_date" name="end_date" value="dd-mm-yyyy" min="2022-11-01" max="2023-12-31">
+            <label class="inline-block text-left mr-4 font-bold text-gray-700 text-lg">Start date</label>
+            <input type="date" id="start_date" name="start_date" required
+              class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400"
+              value="dd-mm-yyyy"
+              oninvalid="this.setCustomValidity('This field is required')"
+              oninput="setCustomValidity('')">
+          </div>
+          <div class="flex items-center mb-5">
+            <label class="inline-block text-left mr-4 font-bold text-gray-700 text-lg">End date</label>
+            <input type="date" id="end_date" name="end_date" required
+              class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400"
+              value="dd-mm-yyyy"
+              oninvalid="this.setCustomValidity('This field is required')"
+              oninput="setCustomValidity('')">
           </div>
           <div class="pt-2">
             <label class="inline-block text-left mr-4 font-bold text-gray-700 text-lg">Task status</label>
-            <select name="task-status" id="task-status" class=" p-2">
+            <select name="task-status" id="task-status" required
+              class="border-b-2 border-gray-400 flex-1 py-2 placeholder-gray-300 outline-none focus:border-green-400"
+              oninvalid="this.setCustomValidity('This field is required')"
+              oninput="setCustomValidity('')">
               <option value="">--select status--</option>
               <option value="pending">pending</option>
               <option value="in progress">in progress</option>
