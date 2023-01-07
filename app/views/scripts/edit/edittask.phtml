@@ -38,11 +38,12 @@ $getTask = ($this->editingTask);
           </div>
           <div class="pt-2">
             <label class="inline-block text-left mr-4 font-bold text-gray-700 text-lg">Task status</label>
-            <select name="task_status" id="task_status" class=" p-2" value="<?php echo $getTask[" task_status"] ?>">
-              <option value="pending">pending</option>
-              <option value="in progress">in progress</option>
-              <option value="done">done</option>
-            </select><br><br>
+            <select name="task_status" id="task_status" class=" p-2" value="<?php echo $getTask["task_status"] ?>">
+              <option value="">--select status--</option>
+              <option value="pending" <?php if ($getTask["task_status"] == "pending") echo "selected"; ?>>pending</option>
+              <option value="in progress" <?php if ($getTask["task_status"] == "in progress") echo "selected"; ?>>in progress</option>
+              <option value="done" <?php if ($getTask["task_status"] == "done") echo "selected"; ?>>done</option>
+            </select>
           </div>
           <div class="text-right pt-10">
             <input type="submit" value="Save changes"
