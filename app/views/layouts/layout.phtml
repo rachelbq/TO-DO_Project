@@ -20,6 +20,24 @@
     <?php
       echo $this->content();
     ?>
+
+  <!--script-->
+  <script>
+    function validateDates() {
+      // Obtiene los valores de las fechas
+      var start_date = document.getElementById("start_date").value;
+      var end_date = document.getElementById("end_date").value;
+
+      // Compara las fechas
+      if (start_date > end_date) {
+        // Muestra un mensaje de error en una ventana emergente
+        alert("End date cannot be earlier than start date");
+        // Evita que se envíe el formulario
+        return false;
+      }
+    }
+    </script>
+
   </body>
 
   <!--footer-->
