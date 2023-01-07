@@ -25,13 +25,13 @@ class DataModel extends Model {
 	public function newTask($task_name, $author_name, $start_date, $end_date, $task_status) {
 		$arrayTasks = json_decode($this->ddbb, true);
 
-			if ($arrayTasks != NULL) {
-				$getLastArray = end($arrayTasks);
-				$getId = current($getLastArray);
-				$newKey = ++$getId;
-			} else {
-	   			$newKey = 1;
-			}
+		if ($arrayTasks != NULL) {
+			$getLastArray = end($arrayTasks);
+			$getId = current($getLastArray);
+			$newKey = ++$getId;
+		} else {
+	   		$newKey = 1;
+		}
 		
 		$arrayAdd = array(
 			'id' => $newKey,
